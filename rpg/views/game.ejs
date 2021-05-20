@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <script src="/public/javascripts/game.js"></script>
+    <script src="/public/javascripts/player.js"></script>
+    <script src="/public/javascripts/enemy.js"></script>
+</head>
+<body>
+    <div class="container is-vertical tile is-ancestor">
+        <div class="tile is-vertical notification is-primary">
+            <h1 class="title is-1">Game Screen</h1>
+            <div class="columns">
+              <div class="column">
+                <h1 class="title">Player</h1>
+                <div class="player">
+        
+                </div>
+              </div>
+              <div class="column">
+                  <div class="header">
+                    <h1 class="title is-4">Choose your Character</h1>
+                  </div>
+               
+              </div>
+              <div class="column">
+                <h1 class="title">Enemy</h1>
+                <div class="enemy">
+                    
+                </div>
+              </div>
+            </div>
+               
+                
+                <div class="interface">
+                    <div class="tile is-parent is-vertical">
+                        
+                        <div class="tile is-child">
+                            <a class="title is-5 button is-link is-light is-rounded" onclick="Game.setGameStart('Warrior')">
+                            Warrior
+                            </a>
+                        </div>
+                        <div class="tile is-child">
+                            <a class="title is-5 button is-link is-light is-rounded" onclick="Game.setGameStart('Hunter')">
+                                Hunter
+                            </a>
+                        </div>
+                        <div class="tile is-child">
+                            <a class="title is-5 button is-link is-light is-rounded" onclick="Game.setGameStart('Mage')">
+                                Mage
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="arena">
+                    <h1 class="title">Arena</h1>
+                </div>
+               
+        
+               
+        </div>
+
+    </div>
+</body>
+</html>

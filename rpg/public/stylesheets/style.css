@@ -1,0 +1,15 @@
+body {
+  padding: 50px;
+
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container{
+  text-align: center;
+}
+.hidden{
+  visibility: hidden;
+}

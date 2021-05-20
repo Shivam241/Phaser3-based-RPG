@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div{
+            text-align: center;
+        }
+    </style>
+    <%  Player.forEach(function(player){%>
+            <% var totalHealth = player.stats.health + player.characters.hp;
+            var totalAttack = player.stats.attack + player.characters.atk;
+            var totalDefence = player.stats.defence + player.characters.def;
+            %>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        </a>
+    
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Home
+          </a>
+    
+          <a class="navbar-item">
+            Documentation
+          </a>
+    
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+    
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About
+              </a>
+              <a class="navbar-item">
+                Jobs
+              </a>
+              <a class="navbar-item">
+                Contact
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+            <div class="tile is-ancestor">
+                <div class="tile is-vertical">
+                  <div class="tile">
+                    <div class="tile is-parent is-vertical">
+                      <article class="tile is-child notification is-primary">
+                        <div class="container is-center">
+                            <h1 class="title is-3">Player Stats</h1>
+                            <p class="title is-5">Health: <%= totalHealth %></p>
+                            <p class="title is-5">Attack: <%= totalAttack %></p>
+                            <p class="title is-5">Defence: <%= totalDefence %></p>
+                        </div>
+                      </article>
+                      <article class="tile is-child notification is-warning">
+                        <div class="container is-center">
+                            <h1 class="title is-3">CharacterName: <%= player.characters.char %></h1>
+                            <div>
+                                <p class="title is-5">Skill: <%= player.characters.skill %></p>
+                                <p class="title is-5">Health Bonus: +<%= player.characters.hp %></p>
+                                <p class="title is-5">Attack Bonus: +<%= player.characters.atk %></p>
+                                <p class="title is-5">Defence Bonus: +<%= player.characters.def %></p>
+                            </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="tile is-parent">
+                      <article class="tile is-child notification is-info">
+                        <h1 class="title is-1">Name: <%= player.name %></h1>
+                        <p class="subtitle">Playing area</p>
+                        <figure class="image is-4by3">
+                          <img src="https://bulma.io/images/placeholders/640x480.png">
+                        </figure>
+                      </article>
+                     
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification is-success">
+                          <div class="content">
+                            <p class="title">Map</p>
+                            <p class="subtitle">Maps and level</p>
+                            <div class="content">
+                              <!-- Content -->
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+                  </div>
+                  <div class="tile is-parent">
+                    <article class="tile is-child notification is-danger">
+                      <p class="title">Moves and Spells</p>
+                      <p class="subtitle">Moves and spells</p>
+                      <div class="content">
+                        <!-- Content -->
+                      </div>
+                    </article>
+                  </div>
+            
+                </div>
+                
+            </div>
+
+     <% })%>
+</body>
+</html>
